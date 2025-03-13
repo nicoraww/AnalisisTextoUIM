@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 # Imagen de encabezado
-st.image("https://cdn.pixabay.com/photo/2017/01/31/17/44/heart-2028247_1280.png", use_column_width=True)
+st.image("istockphoto-1318764563-612x612.jpg", use_column_width=True)
 
 # Estilo con CSS para mejorar la apariencia
 st.markdown(
