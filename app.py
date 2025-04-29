@@ -2,8 +2,8 @@ import streamlit as st
 from textblob import TextBlob
 import re
 from googletrans import Translator
-from streamlit_lottie import st_lottie
-import json
+
+
 import time
 import pandas as pd
 
@@ -14,10 +14,24 @@ st.set_page_config(
     layout="wide"
 )
 
-# Cargar animación Lottie
-with open('ANIMACIONTEST.json') as source:
-    animation = json.load(source)
-st_lottie(animation, width=350)
+
+
+# Animación CSS para emojis
+st.markdown("""
+<style>
+  @keyframes floatEmoji {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  .emoji-anim {
+    font-size: 4rem;
+    text-align: center;
+    animation: floatEmoji 2s ease-in-out infinite;
+    margin: 1rem 0;
+  }
+</style>
+""", unsafe_allow_html=True)
 
 # Título y descripción
 st.title("📝 Analizador de Texto con TextBlob")
